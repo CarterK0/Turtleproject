@@ -1,1 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemp's Ridley Sea Turtle (Lepidochelys kempii)</title>
+    <!-- Load Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles using the new Aegean Blue theme */
+        :root {
+            --color-primary: #104E8B; /* Deep Aegean Blue */
+            --color-accent: #63B3ED; /* Sky Blue */
+            --color-text: #E2E8F0; /* Light Gray Text */
+            --color-background: #1F2937; /* Dark Slate Background */
+            --color-card: #2D3748; /* Darker Card Background */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+        }
+        .slide-container {
+            min-height: 80vh;
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+            background-color: var(--color-card);
+        }
+        .text-primary {
+            color: var(--color-primary);
+        }
+        .text-accent {
+            color: var(--color-accent);
+        }
+        .border-primary {
+            border-color: var(--color-primary);
+        }
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+        .bg-primary-hover:hover {
+            background-color: #0d3e6e; /* Slightly darker Aegean Blue */
+        }
+        .navigation-button {
+            transition: all 0.2s;
+        }
+        .navigation-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+        .hidden-slide {
+            display: none;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Presentation Title -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-accent">Kemp's Ridley Sea Turtle</h1>
+            <h2 class="text-xl italic text-gray-300">(Lepidochelys kempii)</h2>
+            <p class="text-sm text-red-400 font-semibold mt-2">Status: Federally Endangered (HIGHEST CONSERVATION CONCERN in Alabama)</p>
+        </header>
+
+        <!-- Slide Container -->
+        <div id="presentation-slides" class="p-6 md:p-10 rounded-xl slide-container text-color-text">
+
+            <!-- Slide 1: Overview & Facts -->
+            <section id="slide-1" class="slide">
+                <h3 class="text-3xl font-bold mb-4 text-primary border-b-2 border-primary pb-2">Slide 1: General Species Profile</h3>
+                <div class="md:flex md:space-x-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <!-- Image Placeholder: Adult Kemp's Ridley Turtle -->
+                        <img src="https://placehold.co/400x300/104E8B/E2E8F0?text=ADULT+KEMP'S+RIDLEY+TURTLE" 
+                             alt="Image of an adult Kemp's Ridley Sea Turtle" 
+                             class="w-full h-64 md:h-80 object-cover rounded-lg border-2 border-primary shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <ul class="space-y-3 list-disc list-inside text-lg">
+                            <li><span class="font-semibold text-accent">Size:</span> Smallest sea turtle species, typically 24-28 inches (60-70 cm) in shell length.</li>
+                            <li><span class="font-semibold text-accent">Weight:</span> Adults weigh between 70 to 100 pounds (32-45 kg).</li>
+                            <li><span class="font-semibold text-accent">Appearance:</span> Oval, olive-gray carapace (top shell) and a white/pale yellow plastron (bottom shell). Hatchlings are solid black.</li>
+                            <li><span class="font-semibold text-accent">Diet:</span> Primarily benthic feeders, meaning they eat food found on the bottom, mainly **blue crabs**, but also shrimp, clams, and fish.</li>
+                            <li><span class="font-semibold text-accent">Lifespan:</span> Estimated to be around 30 to 50 years.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Habitat & Alabama Distribution -->
+            <section id="slide-2" class="slide hidden-slide">
+                <h3 class="text-3xl font-bold mb-4 text-primary border-b-2 border-primary pb-2">Slide 2: Habitat and Alabama Presence</h3>
+                <div class="space-y-6 text-lg">
+                    <h4 class="font-semibold text-xl text-accent">Primary Habitat</h4>
+                    <p>Kemp's ridleys primarily inhabit the shallow, nearshore coastal waters (neritic zone) of the Gulf of Mexico. They prefer areas with muddy or sandy bottoms where their crab prey is abundant. Juveniles often drift in the open ocean, hiding and feeding in floating **Sargassum seaweed** mats for the first 1-2 years of life.</p>
+
+                    <h4 class="font-semibold text-xl text-accent">Alabama Distribution (Critically Important Area)</h4>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>The species is an **occasional visitor** to Alabama's coastal and bay waters (e.g., Mobile Bay and Gulf Shores beaches).</li>
+                        <li>Alabama's coastal waters are historically significant as crucial **foraging areas** (feeding grounds) for juvenile Kemp's ridleys, especially when blue crabs are plentiful.</li>
+                        <li><span class="font-bold text-red-400">Nesting in Alabama:</span> While 95% of nesting occurs in Mexico, occasional, individual nests have been documented on Alabama beaches (at least two historically documented).</li>
+                        <li>The presence of Kemp's ridleys in the northern Gulf exposes them to threats like incidental capture in shrimp nets, making their protection in Alabama waters vital.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 3: Nesting Habits -->
+            <section id="slide-3" class="slide hidden-slide">
+                <h3 class="text-3xl font-bold mb-4 text-primary border-b-2 border-primary pb-2">Slide 3: Unique Nesting Habits</h3>
+                <div class="md:flex md:space-x-8">
+                    <div class="md:w-1/2 space-y-4">
+                        <h4 class="font-semibold text-xl text-accent">The "Arribada"</h4>
+                        <ul class="list-disc list-inside space-y-3 ml-4 text-lg">
+                            <li>Kemp's ridleys are famous for their synchronized mass nesting events called **arribadas** (Spanish for "arrival").</li>
+                            <li>Large groups of females gather offshore and come ashore simultaneously to nest over a few days. This behavior is believed to overwhelm predators.</li>
+                            <li><span class="font-bold text-yellow-400">Unique Feature:</span> They are the **only sea turtle species that routinely nests during the daytime.**</li>
+                            <li><span class="font-bold">Nesting Season:</span> Primarily April through July.</li>
+                            <li><span class="font-bold">Clutch Size:</span> Females lay an average of 100 eggs per nest and may lay 2-3 clutches per season.</li>
+                            <li><span class="font-bold">Incubation:</span> Eggs hatch after 50–60 days. The temperature of the sand determines the sex of the hatchlings.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 mt-6 md:mt-0">
+                        <!-- Image Placeholder: Hatchlings emerging from sand -->
+                        <img src="https://placehold.co/400x300/0d3e6e/E2E8F0?text=HATCHLINGS+RUSHING+TO+SEA" 
+                             alt="Image of Kemp's Ridley Hatchlings emerging from sand" 
+                             class="w-full h-64 md:h-80 object-cover rounded-lg border-2 border-primary shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Locomotion & AI Tracking Data (Crucial for your class) -->
+            <section id="slide-4" class="slide hidden-slide">
+                <h3 class="text-3xl font-bold mb-4 text-primary border-b-2 border-primary pb-2">Slide 4: Movement and Track Analysis</h3>
+
+                <h4 class="font-semibold text-2xl text-accent mb-3">Locomotion for Tracking Model</h4>
+
+                <div class="space-y-6 text-lg">
+                    <p><span class="font-bold">Marine Movement:</span> Kemp's ridleys are highly migratory, using their front flippers for powerful propulsion while swimming great distances between foraging and nesting grounds.</p>
+
+                    <h4 class="font-semibold text-xl text-accent">Terrestrial Movement (Nesting Track Pattern)</h4>
+                    <p>When adult females emerge onto the beach to nest, they pull their bodies forward using their powerful front flippers. The pattern they leave in the sand is crucial for species identification and nest monitoring.</p>
+
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <p class="font-bold text-yellow-300">AI Tracking Model Input: Track Characteristics</p>
+                        <ul class="list-disc list-inside ml-4 mt-2">
+                            <li><span class="font-semibold">Track Width:</span> Approximately 2 feet (60 cm) wide.</li>
+                            <li><span class="font-semibold">Flipper Motion:</span> **Alternating Gait** (one front flipper pushes, then the other).</li>
+                            <li><span class="font-semibold">Track Appearance:</span> The track marks left by the flippers are staggered, and the marks often resemble a **comma shape** in the sand.</li>
+                            <li><span class="font-semibold">Center Mark:</span> A narrow, relatively continuous tail drag mark is usually visible down the center of the track.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Image Placeholder: Close-up of Sea Turtle Tracks -->
+                    <img src="https://placehold.co/400x300/104E8B/E2E8F0?text=ALTERNATING+GAIT+TRACKS" 
+                         alt="Image of alternating sea turtle tracks in the sand" 
+                         class="w-full h-64 object-cover rounded-lg border-2 border-primary shadow-lg">
+                </div>
+            </section>
+
+            <!-- Slide 5: Resources & Conclusion -->
+            <section id="slide-5" class="slide hidden-slide">
+                <h3 class="text-3xl font-bold mb-4 text-primary border-b-2 border-primary pb-2">Slide 5: Further Resources and Videos</h3>
+
+                <h4 class="font-semibold text-2xl text-accent mb-3">Educational Links & Videos</h4>
+                <div class="space-y-4">
+                    <ul class="list-disc list-inside space-y-3 ml-4 text-lg">
+                        <li><span class="font-semibold">NOAA Fisheries - Species Profile:</span> Get in-depth conservation and management details. <a href="https://www.fisheries.noaa.gov/species/kemps-ridley-turtle" target="_blank" class="text-accent hover:text-white">Read more here.</a></li>
+                        <li><span class="font-semibold">Outdoor Alabama - Overview:</span> Information focused on their presence in Alabama. <a href="https://www.outdooralabama.com/turtles/kemps-ridley-sea-turtle" target="_blank" class="text-accent hover:text-white">View the factsheet.</a></li>
+                        <li><span class="font-semibold">PBS LearningMedia Video:</span> "The Kemp's Ridley Sea Turtle" (Video link for educational context). <a href="https://www.pbslearningmedia.org/resource/lsps07.sci.life.eco.seaturtle/the-kemps-ridley-sea-turtle/" target="_blank" class="text-accent hover:text-white">Watch the video.</a></li>
+                        <li><span class="font-semibold">Padre Island National Seashore Video:</span> Excellent resource on conservation efforts (YouTube). <a href="https://www.youtube.com/watch?v=Q1YWU3cR5xo" target="_blank" class="text-accent hover:text-white">Watch on YouTube: Saving a Species.</a></li>
+                        <li><span class="font-semibold">Scientific Article (Movement):</span> Provides data on inter-nesting movements and habitat use (PDF may require access). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5358874/" target="_blank" class="text-accent hover:text-white">Satellite Tracking Movements.</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="mt-6 flex justify-between">
+            <button id="prev-btn" class="navigation-button bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg bg-primary-hover opacity-50 cursor-not-allowed" disabled>
+                &larr; Previous Slide
+            </button>
+            <span id="slide-counter" class="text-gray-400 text-lg font-mono py-3">Slide 1 of 5</span>
+            <button id="next-btn" class="navigation-button bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-lg bg-primary-hover">
+                Next Slide &rarr;
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('#presentation-slides .slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const counter = document.getElementById('slide-counter');
+            let currentSlideIndex = 0;
+
+            function updateSlide() {
+                // Hide all slides
+                slides.forEach((slide, index) => {
+                    slide.classList.add('hidden-slide');
+                });
+
+                // Show current slide
+                slides[currentSlideIndex].classList.remove('hidden-slide');
+                
+                // Update buttons and counter
+                prevBtn.disabled = currentSlideIndex === 0;
+                prevBtn.classList.toggle('opacity-50', currentSlideIndex === 0);
+                prevBtn.classList.toggle('cursor-not-allowed', currentSlideIndex === 0);
+                prevBtn.classList.toggle('bg-primary', currentSlideIndex > 0);
+                
+                nextBtn.disabled = currentSlideIndex === slides.length - 1;
+                nextBtn.classList.toggle('opacity-50', currentSlideIndex === slides.length - 1);
+                nextBtn.classList.toggle('cursor-not-allowed', currentSlideIndex === slides.length - 1);
+                nextBtn.classList.toggle('bg-primary', currentSlideIndex < slides.length - 1);
+
+                counter.textContent = `Slide ${currentSlideIndex + 1} of ${slides.length}`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlideIndex > 0) {
+                    currentSlideIndex--;
+                    updateSlide();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlideIndex < slides.length - 1) {
+                    currentSlideIndex++;
+                    updateSlide();
+                }
+            });
+
+            // Initialize presentation
+            updateSlide();
+        });
+    </script>
+</body>
+</html>
 
