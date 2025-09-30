@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loggerhead Sea Turtle: Caretta caretta</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Updated Blue & Green Theme Palette
+                        'primary-blue': '#1E90FF', // Dodger Blue for links/highlights
+                        'secondary-sand-light': '#E6F7F9', // Very light background for section elements
+                        'accent-green': '#82E0AA', // New light mint green accent
+                        'deep-navy': '#003366', // Main text/titles
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for Slide Transitions and Layout */
+        body {
+            background-color: #B0E0E6; /* Powder Blue - Main Background */
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .slide.active {
+            opacity: 1;
+            position: relative;
+        }
+        .slide-container {
+            max-width: 1024px;
+            width: 100%;
+            height: 90%;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Allow scrolling inside the card */
+        }
+        /* Style for the fixed navigation controls */
+        .slide-controls {
+            position: fixed;
+            bottom: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 100;
+        }
+        .nav-button {
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .nav-button:hover:not(:disabled) {
+            background-color: #005f9f; /* Slightly darker primary blue on hover */
+            transform: scale(1.05);
+        }
+        .nav-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="p-0 m-0">
+
+    <div id="presentation-container" class="relative w-full h-screen">
+
+        <!-- Slide 1: Title & Introduction -->
+        <div id="slide-1" class="slide active">
+            <div class="slide-container text-center bg-deep-navy text-white shadow-2xl">
+                <div class="my-auto">
+                    <h1 class="text-6xl md:text-8xl font-extrabold mb-4 text-accent-green">Project: Caretta caretta</h1>
+                    <h2 class="text-3xl md:text-5xl font-light mb-8">The Loggerhead Sea Turtle</h2>
+                    <p class="text-xl md:text-2xl font-medium">Researching Endangered Species in Alabama for AI Tracking Model Development</p>
+                    <div class="mt-8">
+                        <img src="https://placehold.co/600x300/003366/82E0AA?text=Loggerhead+Turtle+Placeholder" 
+                             alt="Placeholder image of a Loggerhead Sea Turtle"
+                             class="mx-auto mt-6 rounded-xl shadow-lg w-full max-w-lg object-cover">
+                    </div>
+                </div>
+                <div class="text-sm mt-4 text-gray-200">Slide 1 of 5</div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Species Overview & Conservation Status -->
+        <div id="slide-2" class="slide">
+            <div class="slide-container">
+                <h3 class="text-4xl font-bold text-deep-navy mb-6 border-b-2 border-accent-green pb-2">2. Species Overview & Status</h3>
+
+                <div class="flex flex-col md:flex-row gap-6 flex-grow overflow-y-auto">
+                    <!-- Left Column: Details -->
+                    <div class="md:w-1/2 space-y-4">
+                        <p class="text-lg"><strong class="text-deep-navy">Scientific Name:</strong> <em class="text-primary-blue">Caretta caretta</em></p>
+                        <p class="text-lg"><strong class="text-deep-navy">Description:</strong> Named for its large head and powerful jaws, used to crush hard-shelled prey like conchs, clams, and sea urchins. Their shells (carapace) are reddish-brown.</p>
+                        <p class="text-lg"><strong class="text-deep-navy">Adult Size:</strong> 170 to 500 lbs, with a carapace length up to 45 inches.</p>
+                        <p class="text-lg"><strong class="text-deep-navy">Lifespan:</strong> 30 to 50+ years, reaching sexual maturity between 32 and 35 years.</p>
+
+                        <div class="p-4 rounded-lg bg-secondary-sand-light mt-4">
+                            <h4 class="text-xl font-semibold text-accent-green mb-2">Conservation Status</h4>
+                            <p class="text-base"><strong class="text-deep-navy">Global:</strong> Listed as <span class="font-bold">Vulnerable</span> (IUCN).</p>
+                            <p class="text-base"><strong class="text-deep-navy">U.S. Status:</strong> Federally <span class="font-bold">Threatened</span>.</p>
+                            <p class="text-base"><strong class="text-deep-navy">Alabama Focus:</strong> Loggerheads in Alabama belong to the <span class="font-bold italic">Northern Gulf of Mexico distinct population segment</span>, which is one of the smallest recovery units, making local conservation efforts critical.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Image -->
+                    <div class="md:w-1/2 flex items-center justify-center">
+                        <img src="https://placehold.co/400x400/1E90FF/FFFFFF?text=Loggerhead+Profile" 
+                             alt="Placeholder image of a Loggerhead Sea Turtle in water"
+                             class="rounded-xl shadow-lg border-4 border-deep-navy max-h-full object-cover">
+                    </div>
+                </div>
+                <div class="text-sm mt-4 text-gray-500">Slide 2 of 5</div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Habitat & Nesting in Alabama -->
+        <div id="slide-3" class="slide">
+            <div class="slide-container">
+                <h3 class="text-4xl font-bold text-deep-navy mb-6 border-b-2 border-accent-green pb-2">3. Habitat & Nesting in Alabama</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-grow overflow-y-auto">
+                    <!-- Habitat Section -->
+                    <div class="p-4 border border-deep-navy rounded-lg bg-secondary-sand-light">
+                        <h4 class="text-2xl font-semibold text-deep-navy mb-3">Alabama Distribution & Habitat</h4>
+                        <p class="mb-2"><strong class="text-primary-blue">General Habitat:</strong> Loggerheads are adaptable, found both hundreds of miles offshore (pelagic) and in shallow coastal areas like bays, lagoons, and salt marshes (neritic).</p>
+                        <p class="mb-4"><strong class="text-primary-blue">Found in Alabama:</strong> They are the most common nesting sea turtle species in Alabama.</p>
+                        <ul class="list-disc list-inside space-y-1 ml-4 text-lg">
+                            <li><strong class="text-accent-green">Counties:</strong> Baldwin and Mobile.</li>
+                            <li><strong class="text-accent-green">Beaches:</strong> All Gulf coast beaches, from Dauphin Island's west end to Alabama Point, with the majority of nesting activity concentrated between Fort Morgan and Gulf Shores.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Nesting Section -->
+                    <div class="p-4 border border-deep-navy rounded-lg bg-secondary-sand-light">
+                        <h4 class="text-2xl font-semibold text-deep-navy mb-3">Nesting Habits</h4>
+                        <ul class="list-disc space-y-3 ml-4 text-lg">
+                            <li><strong class="text-primary-blue">Nesting Season:</strong> May 1st to October 31st (Peak: June-July).</li>
+                            <li><strong class="text-primary-blue">Process:</strong> Females nest at night, returning to their natal beaches. They prefer high-energy, coarse-grained beaches.</li>
+                            <li><strong class="text-primary-blue">Clutch Size & Frequency:</strong> They lay 1 to 7 nests per season (average ~4), with an interval of about 14 days between each nesting event. Each nest contains approximately 110-126 eggs.</li>
+                            <li><strong class="text-primary-blue">Hatching:</strong> Eggs incubate for 42 to 75 days. Hatchlings emerge mostly at night and use light and shadow cues to navigate to the sea.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-sm mt-4 text-gray-500">Slide 3 of 5</div>
+            </div>
+        </div>
+        
+        <!-- Slide 4: Locomotion & AI Tracking Data (Footprints) -->
+        <div id="slide-4" class="slide">
+            <div class="slide-container">
+                <h3 class="text-4xl font-bold text-deep-navy mb-6 border-b-2 border-accent-green pb-2">4. Locomotion & AI Tracking Data</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow overflow-y-auto">
+                    <!-- Locomotion -->
+                    <div class="space-y-4">
+                        <h4 class="text-2xl font-semibold text-deep-navy">Movement Style</h4>
+                        <ul class="list-disc space-y-3 ml-4 text-lg">
+                            <li><strong class="text-primary-blue">Aquatic Movement (Adults):</strong> Primarily use a "submarine flight" or <span class="font-bold">flapping</span> motion, moving their large front flippers up and down simultaneously like wings. This is highly efficient for long migrations.</li>
+                            <li><strong class="text-primary-blue">Terrestrial Movement (Nesting/Hatching):</strong> Use a crawling or <span class="font-bold">rowing</span> motion. Diagonal limbs (front-left and rear-right, then front-right and rear-left) move together, pushing the heavy body forward.</li>
+                        </ul>
+                        
+                        <h4 class="text-2xl font-semibold text-deep-navy mt-6">Track Description for AI Model</h4>
+                        <div class="p-3 bg-secondary-sand-light rounded-lg">
+                            <p class="text-base mb-2"><strong class="text-accent-green">The key identifier for Loggerhead tracks is the alternating flipper marks (similar to human walking, not synchronized).</strong></p>
+                            <ul class="list-disc space-y-1 ml-4 text-base">
+                                <li><strong>Track Width:</strong> Typically 3.5 to 4 feet wide.</li>
+                                <li><strong>Flipper Pattern:</strong> Shows an <span class="font-bold">alternating, asymmetrical pattern</span> created by the front flippers.</li>
+                                <li><strong>Body Drag:</strong> A well-defined, generally straight central trough or drag mark from the plastron (bottom shell) is often present, but sometimes subtle in large females.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Footprint Image Placeholder -->
+                    <div class="flex flex-col items-center justify-center">
+                        <img src="https://placehold.co/400x300/E6F7F9/003366?text=Loggerhead+Track+Diagram" 
+                             alt="Placeholder diagram of Loggerhead Sea Turtle tracks"
+                             class="rounded-xl shadow-lg border-4 border-secondary-sand-light mb-3 w-full max-w-sm">
+                        <p class="text-sm text-gray-600 italic text-center">
+                            *Placeholder image: For your AI model, you will need high-resolution images of alternating tracks on sand, showing width and depth metrics.*
+                        </p>
+                    </div>
+                </div>
+                <div class="text-sm mt-4 text-gray-500">Slide 4 of 5</div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Resources & Next Steps -->
+        <div id="slide-5" class="slide">
+            <div class="slide-container">
+                <h3 class="text-4xl font-bold text-deep-navy mb-6 border-b-2 border-accent-green pb-2">5. Resources for Further AI Research</h3>
+
+                <div class="flex flex-col gap-6 flex-grow overflow-y-auto">
+                    <div class="space-y-4">
+                        <h4 class="text-2xl font-semibold text-deep-navy">Official Alabama Conservation</h4>
+                        <ul class="list-disc space-y-2 ml-6 text-lg">
+                            <li><strong class="text-primary-blue">Alabama Sea Turtle Conservation Program:</strong> A crucial local source for nest data, patrols, and specific research on Alabama nesting success. (<a href="https://www.outdooralabama.com/nongame-wildlife-species-projects/loggerhead-sea-turtle-reproductive-study" target="_blank" class="text-accent-green hover:underline">Outdoor Alabama - Reproductive Study</a>)</li>
+                            <li><strong class="text-primary-blue">NOAA Fisheries:</strong> Provides detailed scientific data on population status, migration, and protective measures (TEDs). (<a href="https://www.fisheries.noaa.gov/species/loggerhead-turtle" target="_blank" class="text-accent-green hover:underline">NOAA Loggerhead Profile</a>)</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="text-2xl font-semibold text-deep-navy">Videos & Visual Data (AI Input)</h4>
+                        <ul class="list-disc space-y-2 ml-6 text-lg">
+                            <li><strong class="text-primary-blue">Tracking Turtle Migrations:</strong> Satellite tag data provides excellent datasets on migration paths, speed, and dive profiles (key features for a comprehensive AI model).</li>
+                            <li><strong class="text-primary-blue">Video Resource Example:</strong> Watch this lecture for an in-depth look at conservation and long-running data sets: <a href="https://www.youtube.com/watch?v=7hfPy1HNRJ8" target="_blank" class="text-accent-green hover:underline">Conserving Loggerhead Sea Turtles (YouTube)</a>)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4 p-4 rounded-lg bg-secondary-sand-light">
+                        <p class="text-xl font-medium text-deep-navy">Next Steps for AI Model:</p>
+                        <p class="mt-2 text-lg">To build your tracking model, focus on collecting **annotated images of the tracks** (measurements of width, stride, and flipper depth) and **time-series data of movement** (migration patterns from satellite data). This will help your model differentiate *Caretta caretta* from other species like Kemp's Ridley (which move differently on land).</p>
+                    </div>
+                </div>
+                <div class="text-sm mt-4 text-gray-500">Slide 5 of 5</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Fixed Navigation Controls -->
+    <div class="slide-controls">
+        <button id="prev-btn" class="nav-button bg-primary-blue text-white px-6 py-3 mr-4 rounded-full font-bold shadow-lg" disabled>
+            Previous
+        </button>
+        <button id="next-btn" class="nav-button bg-primary-blue text-white px-6 py-3 rounded-full font-bold shadow-lg">
+            Next
+        </button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentSlide = 0;
+
+        // Function to update the visibility and state of the presentation
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        // Event Listeners for Navigation
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        });
+
+        // Initialize the presentation
+        window.onload = updateSlide;
+    </script>
+</body>
+</html>
