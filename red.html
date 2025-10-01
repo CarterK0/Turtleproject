@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat-shelled Musk Turtle: Research Slides</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and base styling */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hide all slides by default */
+        .slide {
+            display: none;
+        }
+        /* Active slide is visible */
+        .slide.active {
+            display: block;
+        }
+        /* Custom scrollbar for better visual appeal in the dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #064e3b; /* Emerald 900 lighter shade */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #34d399; /* Green 400 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981; /* Green 500 */
+        }
+    </style>
+</head>
+
+<body class="bg-emerald-900 min-h-screen text-white p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto rounded-xl shadow-2xl bg-emerald-800 p-6 sm:p-10">
+        
+        <header class="mb-8 border-b border-green-700 pb-4">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-green-400 text-center uppercase tracking-wider">
+                The Flat-shelled Musk Turtle
+            </h1>
+            <p class="text-center text-green-200 mt-2 text-lg">
+                (Sternotherus depressus) | High School AI Research
+            </p>
+        </header>
+
+        <!-- Slide Container -->
+        <main id="slide-container" class="space-y-6">
+
+            <!-- Slide 1: Overview and Status -->
+            <section id="slide-1" class="slide active">
+                <h2 class="text-3xl font-semibold text-green-400 mb-4 border-b border-green-600 pb-2">1. Species & Conservation Status</h2>
+                <div class="md:flex md:space-x-8">
+                    <div class="md:w-1/2 space-y-4">
+                        <p class="text-green-100 leading-relaxed">
+                            The Flat-shelled Musk Turtle is small, rarely exceeding 11 cm in carapace length, and is easily identified by its notably flattened upper shell (carapace). This adaptation allows it to hide deep within rock crevices.
+                        </p>
+                        <p class="bg-emerald-700 p-4 rounded-lg shadow-md border-l-4 border-red-500">
+                            <span class="font-bold text-red-400">STATUS:</span> Endemic to Alabama and federally listed as a <strong class="text-red-300">Threatened Species (ESA)</strong>. The IUCN classifies it as <strong class="text-red-300">Critically Endangered</strong>.
+                        </p>
+                        <ul class="list-disc list-inside text-green-200 ml-4 space-y-1">
+                            <li>Scientific Name: <span class="italic font-mono">Sternotherus depressus</span></li>
+                            <li>Key Feature: Highly flattened carapace.</li>
+                            <li>Primary Threat: Siltation and habitat degradation.</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 mt-6 md:mt-0 flex items-center justify-center">
+                        <div class="bg-emerald-700 p-3 rounded-lg shadow-xl">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Habitat and Distribution -->
+            <section id="slide-2" class="slide">
+                <h2 class="text-3xl font-semibold text-green-400 mb-4 border-b border-green-600 pb-2">2. Habitat & Alabama Distribution</h2>
+                <div class="space-y-4 text-green-100">
+                    <p class="text-lg font-medium text-green-300">
+                        The Flat-shelled Musk Turtle is only found in one place in the world: the <strong class="text-yellow-300">Upper Black Warrior River System</strong> in west-central Alabama.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-emerald-700 p-4 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-green-400">Optimal Stream Habitat</h3>
+                            <ul class="list-disc list-inside ml-2 space-y-1">
+                                <li>Free-flowing creeks or small rivers.</li>
+                                <li>Alternating deep pools (1-1.5m) and riffles.</li>
+                                <li>Abundance of submerged boulders and crevices (for hiding).</li>
+                                <li>Low silt load and minimal pollution.</li>
+                                <li>Abundant food sources (snails and mussels).</li>
+                            </ul>
+                        </div>
+                        <div class="bg-emerald-700 p-4 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-green-400">Distribution (Key Counties)</h3>
+                            <p class="mb-2">The range is restricted upstream from the Bankhead Dam, encompassing parts of:</p>
+                            <div class="flex flex-wrap gap-2 text-sm">
+                                <span class="bg-green-600 px-3 py-1 rounded-full">Blount</span>
+                                <span class="bg-green-600 px-3 py-1 rounded-full">Cullman</span>
+                                <span class="bg-green-600 px-3 py-1 rounded-full">Jefferson</span>
+                                <span class="bg-green-600 px-3 py-1 rounded-full">Tuscaloosa</span>
+                                <span class="bg-green-600 px-3 py-1 rounded-full">Walker</span>
+                                <span class="bg-green-600 px-3 py-1 rounded-full">Winston</span>
+                                <span class="bg-green-600 px-3 py-1 rounded-full">and others...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Locomotion and Nesting -->
+            <section id="slide-3" class="slide">
+                <h2 class="text-3xl font-semibold text-green-400 mb-4 border-b border-green-600 pb-2">3. Movement & Reproductive Habits</h2>
+                <div class="grid md:grid-cols-2 gap-6 text-green-100">
+                    <!-- Locomotion -->
+                    <div class="bg-emerald-700 p-5 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3 text-green-400">Movement & Activity</h3>
+                        <p class="mb-3">
+                            These turtles are **highly aquatic** and are generally poor swimmers. Their primary mode of movement is:
+                        </p>
+                        <p class="text-2xl font-extrabold text-green-300 mb-4">
+                            "WALKING ALONG THE RIVER BOTTOM"
+                        </p>
+                        <ul class="list-disc list-inside ml-2 space-y-1">
+                            <li>Activity: Mostly <strong class="text-green-300">nocturnal or crepuscular</strong> (dawn/dusk).</li>
+                            <li>Basking: Rarely basks, remaining secretive and submerged.</li>
+                            <li>Home Range: Adults usually stay within 20–30 meters of a location, though home ranges can average over 300 meters.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Nesting -->
+                    <div class="bg-emerald-700 p-5 rounded-lg">
+                        <h3 class="text-xl font-bold mb-3 text-green-400">Nesting Habits</h3>
+                        <p class="mb-3">
+                            Females have a low reproductive rate, laying small clutches annually:
+                        </p>
+                        <ul class="list-disc list-inside ml-2 space-y-1">
+                            <li>Clutches per Year: Up to <strong class="text-green-300">two</strong> clutches.</li>
+                            <li>Nesting Season: May through early July.</li>
+                            <li>Clutch Size: Small, typically <strong class="text-green-300">1 to 4 eggs</strong>.</li>
+                            <li>Nest Site: Shallow nests dug in <strong class="text-green-300">high sandy banks</strong> or the riparian zone (the area adjacent to the river) to avoid flooding.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Footprint Data for AI Tracking Model -->
+            <section id="slide-4" class="slide">
+                <h2 class="text-3xl font-semibold text-green-400 mb-4 border-b border-green-600 pb-2">4. Footprint Data for AI Tracking Model</h2>
+                <p class="text-lg font-medium text-green-300 mb-4">
+                    Specific footprints for <span class="italic">S. depressus</span> are extremely rare. Use the general characteristics of a **Musk Turtle's gait** to train your model.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6 text-green-100">
+                    
+                    <div class="bg-emerald-700 p-4 rounded-lg md:col-span-2">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">Key Tracking Signatures</h3>
+                        <ul class="list-disc list-inside ml-2 space-y-2">
+                            <li><strong class="text-green-300">Gait (Pattern):</strong> Turtles typically use an **"understep walk,"** where the hind foot lands behind the front foot. This creates two nearly continuous, parallel trails.</li>
+                            <li><strong class="text-green-300">Appearance:</strong> The resulting pattern is often described as resembling a **"tank tread"** in soft sand or mud.</li>
+                            <li><strong class="text-green-300">Foot/Toe Count:</strong> Tracks are generally <strong class="text-green-300">oval in shape</strong>. Look for marks showing <strong class="text-green-300">5 toes</strong> on the front foot and typically <strong class="text-green-300">4-5 toes</strong> with prominent <strong class="text-green-300">claw marks</strong> on the hind feet.</li>
+                            <li><strong class="text-green-300">Drag Marks:</strong> Look for a thin, central groove caused by the tail dragging, or wider, intermittent marks from the edge of the shell when the turtle is resting or pushing off.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-emerald-700 p-4 rounded-lg flex flex-col items-center justify-center">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">Visual Reference</h3>
+                        <div class="my-2 p-2">
+                            
+                        </div>
+                        <p class="text-sm text-green-200 mt-2 text-center">
+                            Search near high, sandy banks close to the water for prints.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Resources -->
+            <section id="slide-5" class="slide">
+                <h2 class="text-3xl font-semibold text-green-400 mb-4 border-b border-green-600 pb-2">5. Additional Resources & Media</h2>
+                <div class="space-y-6 text-green-100">
+                    
+                    <div class="bg-emerald-700 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">Useful Links & Documentation</h3>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li><a href="https://www.outdooralabama.com/turtles/flattened-musk-turtle" target="_blank" class="text-green-300 hover:underline">Outdoor Alabama Fact Sheet</a>: Detailed description and ecology from a key state resource.</li>
+                            <li><a href="https://en.wikipedia.org/wiki/Flattened_musk_turtle" target="_blank" class="text-green-300 hover:underline">Wikipedia / IUCN Status</a>: Comprehensive overview of taxonomy and critically endangered status.</li>
+                            <li><a href="https://www.forestry.alabama.gov/Pages/Informational/Endangered/Flattened_Musk_Turtle.pdf" target="_blank" class="text-green-300 hover:underline">Alabama Forestry Commission PDF</a>: Information focusing on habitat quality and management practices.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-emerald-700 p-4 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-green-400">Relevant Videos & Locomotion Examples</h3>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li><a href="https://naturetracking.com/herp-tracks/" target="_blank" class="text-green-300 hover:underline">Herp Tracks and Sign Guide</a>: Excellent resource on identifying general reptile tracks, critical for your tracking model's foundation.</li>
+                            <li><a href="https://www.youtube.com/watch?v=2yVR3mLN1us" target="_blank" class="text-green-300 hover:underline">Loggerhead Musk Turtle Video</a>: Shows behavior and movement of a related species (musk turtles share similar bottom-walking locomotion).</li>
+                        </ul>
+                        <p class="mt-3 text-sm text-green-200">
+                            *Note: Direct videos of the highly protected Flat-shelled Musk Turtle are rare; general musk turtle videos offer the best insight into behavior.*
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Navigation Controls -->
+        <footer class="mt-8 pt-6 border-t border-green-700 flex justify-between">
+            <button id="prev-btn" onclick="changeSlide(-1)" disabled class="px-6 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                &larr; Previous
+            </button>
+            <span id="slide-indicator" class="text-green-300 text-lg self-center font-bold">1 / 5</span>
+            <button id="next-btn" onclick="changeSlide(1)" class="px-6 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold transition duration-200">
+                Next &rarr;
+            </button>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Slide Functionality -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        const indicator = document.getElementById('slide-indicator');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        /**
+         * Updates the visibility of the slides and the state of navigation buttons.
+         */
+        function updateSlideDisplay() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+
+            // Update indicator
+            indicator.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+        /**
+         * Changes the current slide index.
+         * @param {number} direction - 1 for next, -1 for previous.
+         */
+        window.changeSlide = function(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 0 && newSlide < totalSlides) {
+                currentSlide = newSlide;
+                updateSlideDisplay();
+            }
+        };
+
+        // Initialize the display
+        updateSlideDisplay();
+    </script>
+
+</body>
+</html>
