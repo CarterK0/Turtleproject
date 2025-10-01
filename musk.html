@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flattened Musk Turtle (Sternotherus depressus)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to enforce the cool color scheme */
+        :root {
+            --bg-teal: #008080; /* Teal */
+            --text-powder-blue: #B0E0E6; /* Powder Blue */
+            --accent-cyan: #48D1CC; /* Medium Turquoise for contrast */
+            --border-color: #004d4d; /* Darker teal for borders */
+        }
+        body {
+            background-color: var(--bg-teal);
+            color: var(--text-powder-blue);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        /* Style for the active tab content */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Style for the tab buttons */
+        .tab-button {
+            background-color: var(--border-color); /* Darker teal */
+            color: var(--text-powder-blue);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .tab-button.active {
+            background-color: var(--bg-teal);
+            border-bottom-color: var(--accent-cyan); /* Cyan underline for active tab */
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        .content-box {
+            background-color: rgba(0, 77, 77, 0.7); /* Slightly darker, translucent box */
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="presentation" class="max-w-4xl w-full mx-auto content-box rounded-xl shadow-2xl overflow-hidden p-6 md:p-10">
+        
+        <!-- Header Section -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-2 text-white border-b pb-3 border-cyan-400">
+            <span class="text-[--accent-cyan]">Flattened Musk Turtle</span>
+        </h1>
+        <p class="text-center italic text-xl mb-8 text-[--text-powder-blue]">(<span class="font-mono">Sternotherus depressus</span>)</p>
+
+        <!-- Tabs Navigation -->
+        <div class="flex flex-wrap justify-center border-b border-[--border-color] mb-6">
+            <button class="tab-button active px-4 py-2 text-lg rounded-t-lg transition-colors" data-tab="general">
+                Overview & Habitat
+            </button>
+            <button class="tab-button px-4 py-2 text-lg rounded-t-lg transition-colors" data-tab="alabama">
+                Alabama Range & Nesting
+            </button>
+            <button class="tab-button px-4 py-2 text-lg rounded-t-lg transition-colors" data-tab="movement">
+                Movement & Tracking Model
+            </button>
+            <button class="tab-button px-4 py-2 text-lg rounded-t-lg transition-colors" data-tab="resources">
+                Resources
+            </button>
+        </div>
+
+        <!-- Tab Contents -->
+
+        <!-- 1. Overview & Habitat -->
+        <div id="general" class="tab-content active p-4 content-box rounded-b-lg">
+            <div class="md:flex md:space-x-6">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-[--accent-cyan]">Species Overview</h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>
+                            <strong class="text-white">Classification:</strong> Freshwater turtle, endemic to Alabama. Listed as *Threatened*.
+                        </li>
+                        <li>
+                            <strong class="text-white">Size:</strong> Small, rarely exceeding 11.0 cm (4.3 inches) in carapace length.
+                        </li>
+                        <li>
+                            <strong class="text-white">Physical Trait:</strong> The carapace (upper shell) is distinctly flat and low, an adaptation that allows it to quickly slip into narrow rock crevices for refuge and protection from strong currents.
+                        </li>
+                        <li>
+                            <strong class="text-white">Diet:</strong> Primarily carnivorous, feeding heavily on aquatic invertebrates, especially *freshwater snails* and introduced Asiatic clams.
+                        </li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold mt-6 mb-4 text-[--accent-cyan]">Preferred Habitat</h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>
+                            <strong class="text-white">Type:</strong> Free-flowing large creeks and small rivers.
+                        </li>
+                        <li>
+                            <strong class="text-white">Structure:</strong> Optimal areas feature alternating pools (3.6 to 5 ft deep) and riffles, abundant submerged rocks, boulders, and crevices.
+                        </li>
+                        <li>
+                            <strong class="text-white">Water Quality:</strong> Requires **low silt load** and minimal pollution, as siltation fills the vital rock crevices the turtle uses for cover and eliminates its primary snail food source.
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 mt-6 md:mt-0 flex flex-col items-center">
+                    <h3 class="text-xl font-semibold mb-2 text-[--accent-cyan]">Turtle Visual Reference</h3>
+                    <!-- Image of the Flattened Musk Turtle -->
+                    <img src="https://placehold.co/400x300/004d4d/B0E0E6?text=Image+of+Flattened+Musk+Turtle" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/004d4d/B0E0E6?text=Image+of+Flattened+Musk+Turtle'"
+                         alt="Image of the Flattened Musk Turtle (Sternotherus depressus) showing its flat shell." 
+                         class="rounded-lg shadow-lg w-full max-w-sm border-4 border-[--border-color] mb-4"/>
+                         
+                    <p class="text-sm text-center italic">Note the characteristic flattened carapace, allowing it to hide.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Alabama Range & Nesting -->
+        <div id="alabama" class="tab-content p-4 content-box rounded-b-lg">
+            <h2 class="text-3xl font-bold mb-4 text-[--accent-cyan]">Distribution in Alabama (Endemic)</h2>
+            <p class="text-lg mb-4">
+                The Flattened Musk Turtle is **endemic** (only found) to the state of Alabama, specifically within the upper **Black Warrior River system** above the Bankhead Dam.
+            </p>
+            <ul class="list-disc list-inside grid grid-cols-2 gap-2 text-lg mb-6">
+                <li>Blount County</li>
+                <li>Cullman County</li>
+                <li>Etowah County</li>
+                <li>Fayette County</li>
+                <li>Jefferson County</li>
+                <li>Lawrence County</li>
+                <li>Marion County</li>
+                <li>Marshall County</li>
+                <li>Tuscaloosa County</li>
+                <li>Walker County</li>
+                <li>Winston County</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold mb-4 text-[--accent-cyan]">Nesting Habits</h2>
+            <ul class="list-disc list-inside space-y-2 text-lg">
+                <li>
+                    <strong class="text-white">Nesting Season:</strong> May through September.
+                </li>
+                <li>
+                    <strong class="text-white">Clutch Size:</strong> Small, typically 1 to 3 eggs per clutch. Females lay two clutches per year.
+                </li>
+                <li>
+                    <strong class="text-white">Nest Location:</strong> Females briefly leave the water to deposit eggs in shallow nests. Nests are typically dug in high sandy banks or within the surrounding riparian zone (river bank), usually within 100 feet of the water in full or partial sun areas.
+                </li>
+            </ul>
+        </div>
+
+        <!-- 3. Movement & Tracking Model -->
+        <div id="movement" class="tab-content p-4 content-box rounded-b-lg">
+            <h2 class="text-3xl font-bold mb-4 text-[--accent-cyan]">Movement and Behavior</h2>
+            <ul class="list-disc list-inside space-y-2 text-lg mb-6">
+                <li>
+                    <strong class="text-white">Activity:</strong> Primarily **Nocturnal** for adults, especially during warm summer months (April to October). Juveniles are more likely to be active during the day.
+                </li>
+                <li>
+                    <strong class="text-white">Home Range:</strong> Adults exhibit small home ranges, averaging about 332 m in stream length. They are bottom-dwellers and rarely move far from their preferred rock crevice refugia.
+                </li>
+                <li>
+                    <strong class="text-white">Increased Movement:</strong> Movement increases during the breeding/nesting season (Spring/Early Summer) and is positively correlated with water temperature and precipitation.
+                </li>
+            </ul>
+
+            <h2 class="text-3xl font-bold mb-4 text-[--accent-cyan]">Footprint Data for Tracking Model</h2>
+            <p class="text-lg mb-4 text-white font-semibold">
+                **Key Insight:** This species is highly aquatic and spends most of its life on the rocky/cobble stream bed, rarely basking or moving far on land.
+            </p>
+            
+            <div class="md:flex md:space-x-6">
+                <div class="md:w-1/2">
+                    <p class="text-lg">
+                        Due to its life history, clear, terrestrial footprint tracks are **rare** and challenging to find, except for the short distance traveled by nesting females or hatchlings moving to the water.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-lg mt-3">
+                        <li>
+                            <strong class="text-white">Foot Structure:</strong> Musk turtles have five claws on each foot and are partially webbed.
+                        </li>
+                        <li>
+                            <strong class="text-white">Track Profile:</strong> When moving on soft substrate (sand/mud near nest sites), tracks would likely show alternating *claw marks* (three to five per foot) and a partial or faint *webbing impression*, often with a drag line from the tail or posterior carapace.
+                        </li>
+                        <li>
+                            <strong class="text-white">AI Model Focus:</strong> For this species, the AI model should be trained to look for track patterns near *sandy riparian zones* during nesting season (May-Sept), or possibly use **acoustic/visual sensors** to track movement underwater, as terrestrial footprints are not the primary data source.
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 mt-6 md:mt-0 flex flex-col items-center">
+                    <h3 class="text-xl font-semibold mb-2 text-[--accent-cyan]">Conceptual Footprint Diagram</h3>
+                    <!-- Diagrammatic Footprint for Tracking Model -->
+                    <div class="w-full max-w-sm h-64 bg-gray-200 p-4 rounded-lg shadow-inner flex items-center justify-center border-4 border-dashed border-[--accent-cyan]">
+                        <div class="text-center text-[#004d4d]">
+                            <p class="font-bold text-xl">
+                                <span class="text-[--accent-cyan]">FMT TRACK DIAGRAM</span>
+                            </p>
+                            <p class="text-sm mt-1">Four Claw Marks (Left)</p>
+                            <p class="text-sm">Partial Webbing Impression</p>
+                            <p class="text-sm">Tail/Carapace Drag Line (Faint)</p>
+                            <p class="text-xs mt-2 text-red-500 font-bold">Concept based on kinematic models. Real-world tracks are rare.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Resources -->
+        <div id="resources" class="tab-content p-4 content-box rounded-b-lg">
+            <h2 class="text-3xl font-bold mb-4 text-[--accent-cyan]">Additional Links & Videos</h2>
+            
+            <h3 class="text-2xl font-semibold mb-3 text-white">Conservation and Information</h3>
+            <ul class="list-disc list-inside space-y-2 text-lg">
+                <li>
+                    <a href="https://www.fws.gov/species/flattened-musk-turtle-sternotherus-depressus" target="_blank" class="text-[--accent-cyan] hover:underline">
+                        U.S. Fish & Wildlife Service Species Profile
+                    </a>: Official status, characteristics, and threats.
+                </li>
+                <li>
+                    <a href="https://www.iucnredlist.org/species/pdf/97383753" target="_blank" class="text-[--accent-cyan] hover:underline">
+                        IUCN Red List Assessment (PDF)
+                    </a>: Detailed ecology, threats, and conservation needs.
+                </li>
+                <li>
+                    <a href="https://www.outdooralabama.com/turtles/flattened-musk-turtle" target="_blank" class="text-[--accent-cyan] hover:underline">
+                        Outdoor Alabama Fact Sheet
+                    </a>: Local information on distribution and life history.
+                </li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold mb-3 mt-6 text-white">Related Videos & Movement Ecology</h3>
+            <ul class="list-disc list-inside space-y-2 text-lg">
+                <li>
+                    <a href="https://www.researchgate.net/publication/359015828_Movement_Ecology_of_Flattened_Musk_Turtles_Sternotherus_depressus" target="_blank" class="text-[--accent-cyan] hover:underline">
+                        ResearchGate: Movement Ecology Study
+                    </a>: Academic paper on home range and activity patterns (useful for modeling movement!).
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=BjhX0FOZOJ8" target="_blank" class="text-[--accent-cyan] hover:underline">
+                        YouTube: General Musk Turtle Video (S. Intermedius)
+                    </a>: While not the Flattened Musk Turtle, this video shows related species behavior and movement in an aquatic environment, which can inform your tracking model of generalized Kinosternidae movement.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.getAttribute('data-tab');
+
+                    // Deactivate all
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    // Activate selected tab and content
+                    tab.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
