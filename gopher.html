@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopher Tortoise (Gopherus polyphemus) - Alabama Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Colors defined based on user request */
+        :root {
+            --color-sage: #B2AC88; /* Background */
+            --color-fern: #4F7942; /* Main Text / Headings */
+            --color-light-cool: #f8fafc; /* Pale, cool card background for contrast */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-sage);
+        }
+        .main-header {
+            color: var(--color-fern);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .text-fern {
+            color: var(--color-fern);
+        }
+        .bg-light-cool {
+            background-color: var(--color-light-cool);
+        }
+        .tab-button {
+            border-radius: 0.5rem 0.5rem 0 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab-button.active {
+            background-color: var(--color-light-cool);
+            color: var(--color-fern);
+            font-weight: 700;
+            border-bottom: 4px solid var(--color-fern);
+        }
+        .tab-button:not(.active) {
+            background-color: rgba(79, 121, 66, 0.2); /* Light fern tint */
+            color: #2d3748; /* Dark text for readability */
+        }
+        .card-content {
+            border-radius: 0 0.5rem 0.5rem 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto rounded-xl shadow-2xl overflow-hidden">
+        
+        <!-- Header Section -->
+        <header class="p-6 md:p-8 bg-light-cool rounded-t-xl">
+            <h1 class="text-3xl md:text-5xl font-extrabold main-header mb-2">
+                Gopher Tortoise: Keystone Species of Alabama's Coastal Plain
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700">
+                <span class="text-fern font-semibold">Keystone Species:</span> Gopherus polyphemus
+            </p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <div class="flex flex-wrap border-b-0">
+            <button onclick="showSlide('species')" class="tab-button active p-3 md:p-4 text-sm md:text-base flex-1 min-w-0 md:min-w-[150px]">
+                Overview & Status
+            </button>
+            <button onclick="showSlide('habitat')" class="tab-button p-3 md:p-4 text-sm md:text-base flex-1 min-w-0 md:min-w-[150px]">
+                Alabama Habitat
+            </button>
+            <button onclick="showSlide('nesting')" class="tab-button p-3 md:p-4 text-sm md:text-base flex-1 min-w-0 md:min-w-[150px]">
+                Nesting & Movement
+            </button>
+            <button onclick="showSlide('tracking')" class="tab-button p-3 md:p-4 text-sm md:text-base flex-1 min-w-0 md:min-w-[150px]">
+                Footprints for AI Model
+            </button>
+            <button onclick="showSlide('resources')" class="tab-button p-3 md:p-4 text-sm md:text-base flex-1 min-w-0 md:min-w-[150px]">
+                Resources
+            </button>
+        </div>
+
+        <!-- Content Area -->
+        <main id="content-container" class="p-6 md:p-10 bg-light-cool card-content shadow-inner">
+            
+            <!-- 1. Overview & Status -->
+            <div id="slide-species" class="slide">
+                <h2 class="text-3xl font-bold text-fern mb-4">Species Overview & Conservation Status</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2">
+                        <p class="text-gray-800 mb-4">
+                            The Gopher Tortoise is the only native tortoise species east of the Mississippi River. They are known as a keystone species because their deep burrows provide critical refuge for over 360 other animal species (commensals), including the federally threatened Eastern Indigo Snake. Without the tortoise, these other species would struggle to survive in the ecosystem.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><span class="font-semibold text-fern">Size:</span> Adults typically measure 9 to 11 inches in length.</li>
+                            <li><span class="font-semibold text-fern">Lifespan:</span> Can live 40-60 years in the wild.</li>
+                            <li><span class="font-semibold text-fern">Shell Color:</span> Tan, brown, or gray.</li>
+                            <li><span class="font-semibold text-fern">Alabama Status:</span> Populations west of the Mobile and Tombigbee Rivers (Choctaw, Washington, and Mobile counties) are Federally Threatened. In the rest of its Alabama range, it is protected by state law as a non-game species of High Conservation Concern.</li>
+                            <li><span class="font-semibold text-fern">Primary Threat:</span> Habitat loss and fragmentation, largely due to development and the suppression of natural, necessary fires in the longleaf pine ecosystem.</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-4">
+                         
+                        <p class="text-xs text-gray-600 italic">The gopher tortoise is known for its domed shell and shovel-like front limbs used for digging.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Alabama Habitat -->
+            <div id="slide-habitat" class="slide hidden">
+                <h2 class="text-3xl font-bold text-fern mb-4">Habitat & Range in Alabama</h2>
+                <p class="text-gray-800 mb-4">
+                    Gopher tortoises thrive in the dry, sandy upland habitats of the Coastal Plain that historically supported the Longleaf Pine ecosystem. These conditions are necessary for them to dig their extensive burrows and for their eggs to incubate successfully.
+                </p>
+                
+                <div class="p-4 bg-lime-100 rounded-lg shadow-md mb-6">
+                    <h3 class="text-xl font-semibold text-fern mb-2">Ideal Alabama Habitat:</h3>
+                    <p class="text-gray-700">
+                        They prefer <span class="font-medium">Longleaf Pine-Scrub Oak-Wiregrass Sand Hills</span>. The key features are:
+                        <ul class="list-disc list-inside ml-4 mt-2 text-gray-700">
+                            <li><span class="font-semibold">Soil:</span> Dry, deep, well-drained sandy soils for burrow excavation.</li>
+                            <li><span class="font-semibold">Canopy:</span> Open canopy cover to allow sufficient sunlight for thermoregulation, nesting, and the growth of low herbaceous forage plants (grasses, forbs, legumes).</li>
+                            <li><span class="font-semibold">Maintenance:</span> Habitats must be maintained by frequent <span class="text-fern">prescribed fire</span> to prevent canopy closure and encourage groundcover growth.</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-fern mb-2">Counties Where Found:</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                    Primarily below the Fall Line in the Coastal Plain, including (but not limited to): Mobile, Washington, Choctaw, Baldwin, Escambia, Conecuh, Covington, Coffee, Geneva, Houston, Henry, Barbour, and Pike Counties.
+                </p>
+            </div>
+
+            <!-- 3. Nesting & Movement -->
+            <div id="slide-nesting" class="slide hidden">
+                <h2 class="text-3xl font-bold text-fern mb-4">Nesting Habits & Movement</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Movement -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-fern mb-2">Movement & Burrow Use</h3>
+                        <p class="text-gray-800 mb-2">
+                            Gopher tortoises are land-dwelling and spend up to 80% of their time within their burrows, which protect them from extreme temperatures, drought, fire, and predators.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><span class="font-semibold">Burrow Structure:</span> Burrows are typically 15-20 feet long, sloping down to a chamber 6.5 feet deep, though some can reach 40 feet in length.</li>
+                            <li><span class="font-semibold">Locomotion:</span> They move by walking on their elephantine hind legs and use their paddle-like forelimbs for digging and slow, determined walking. They cannot swim well.</li>
+                            <li><span class="font-semibold">Foraging:</span> They forage for food (primarily grasses, forbs, and legumes) usually within 160 feet of their burrow entrance, using the burrow as a safe retreat.</li>
+                            <li><span class="font-semibold">Mating:</span> Males travel farther than females during the breeding season (March to October) to find mates.</li>
+                        </ul>
+                    </div>
+                    <!-- Nesting -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-fern mb-2">Nesting Habits</h3>
+                        <p class="text-gray-800 mb-2">
+                            Females exhibit specific nesting behavior, relying on sunlit, sandy spots for successful incubation.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><span class="font-semibold">Nesting Season:</span> Eggs are typically laid between May and July.</li>
+                            <li><span class="font-semibold">Clutch Size:</span> One clutch per year, usually containing 5 to 9 eggs.</li>
+                            <li><span class="font-semibold">Nest Location:</span> Nests are most often dug in the loose mound of sand at the burrow entrance, known as the <span class="text-fern font-medium">burrow apron</span>. This provides the soft, well-drained soil and sun exposure needed for incubation.</li>
+                            <li><span class="font-semibold">Incubation:</span> Eggs take 80 to 110 days to hatch. Hatchling sex is determined by nest temperature (greater than 85°F results in females).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Footprints for Tracking Model (AI Focus) -->
+            <div id="slide-tracking" class="slide hidden">
+                <h2 class="text-3xl font-bold text-fern mb-4">Footprints and Tracks for AI Tracking Models</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <div>
+                        <p class="text-gray-800 mb-4">
+                            For your AI tracking model, recognizing the distinct features of the Gopher Tortoise track is crucial. Since they prefer sandy, open habitats, their tracks are often found crossing sand roads or in the loose sand surrounding their burrows.
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold text-fern mb-2">Track Characteristics:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li><span class="font-semibold">Forefeet:</span> Wide, short, and flattened, functioning like shovels. Tracks often show distinct, blunt claw marks.</li>
+                            <li><span class="font-semibold">Hindfeet:</span> Elephantine and club-like, often leaving wide, round prints with less defined toe separation than the forefeet.</li>
+                            <li><span class="font-semibold">Trail:</span> Due to their wide bodies and short legs, they leave a wide, somewhat wavering trail. The shell may sometimes drag a faint line down the center of the track path, especially in loose sand, though this is less common for an actively walking adult.</li>
+                            <li><span class="font-semibold">Distinguishing Feature:</span> The presence of the large, half-moon shaped burrow entrance and its apron often confirms the tracks belong to a Gopher Tortoise.</li>
+                        </ul>
+                        <p class="mt-4 p-3 bg-lime-100 rounded-lg text-sm text-gray-700">
+                             Tip for Data Collection: Focus on collecting high-contrast images of tracks on fresh, moist sand to clearly define the edges and claw marks. This detail is essential for training computer vision models.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center space-y-4 bg-lime-100 p-4 rounded-lg">
+                        
+                        <p class="text-xs text-gray-600 italic">Example of Gopher Tortoise tracks traversing a sand road. Note the wide path and distinct foot impressions for tracking models.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Resources -->
+            <div id="slide-resources" class="slide hidden">
+                <h2 class="text-3xl font-bold text-fern mb-4">Additional Links & Educational Resources</h2>
+                <p class="text-gray-800 mb-6">
+                    Use these links for further research, data, and video resources.
+                </p>
+
+                <div class="space-y-4">
+                    <!-- Research and Information -->
+                    <div class="p-4 bg-lime-100 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-fern mb-2">Information & Conservation:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li>
+                                <span class="font-semibold">Alabama Outdoor (Gopher Tortoise Project):</span> <a href="https://www.outdooralabama.com/gopher-tortoise-project" target="_blank" class="text-blue-700 hover:text-blue-500 underline">Overview of Alabama's efforts and status.</a>
+                            </li>
+                            <li>
+                                <span class="font-semibold">U.S. Fish & Wildlife Service:</span> <a href="https://www.fws.gov/project/gopher-tortoise" target="_blank" class="text-blue-700 hover:text-blue-500 underline">Federal status, range, and management of the species.</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Video Resources -->
+                    <div class="p-4 bg-lime-100 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-fern mb-2">Educational Videos:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                            <li>
+                                <span class="font-semibold">PBS LearningMedia (Burrowing for Safety):</span> <a href="https://www.pbslearningmedia.org/resource/nat15.sci.lisci.gopher/gopher-tortoises-burrowing-to-escape-forest-fires/" target="_blank" class="text-blue-700 hover:text-blue-500 underline">Video on how burrows protect tortoises from fire (Grades 3-8).</a>
+                            </li>
+                            <li>
+                                <span class="font-semibold">YouTube (Keystone Role):</span> <a href="https://www.youtube.com/watch?v=7U_-esxGNVg" target="_blank" class="text-blue-700 hover:text-blue-500 underline">Explains why the Gopher Tortoise is crucial to its environment.</a>
+                            </li>
+                            <li>
+                                <span class="font-semibold">Knowitall.org (Gopher Tortoise):</span> <a href="https://www.knowitall.org/video/gopher-tortoise-whats-wild" target="_blank" class="text-blue-700 hover:text-blue-500 underline">What's Wild - Gopher Tortoise video asset.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // JavaScript for handling the interactive slide logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure the first slide is visible and tabs are correctly marked on load
+            showSlide('species');
+        });
+
+        function showSlide(slideId) {
+            // Hide all slides
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.add('hidden');
+            });
+
+            // Show the requested slide
+            const activeSlide = document.getElementById(`slide-${slideId}`);
+            if (activeSlide) {
+                activeSlide.classList.remove('hidden');
+            }
+
+            // Update active tab styling
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.querySelector(`button[onclick="showSlide('${slideId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
