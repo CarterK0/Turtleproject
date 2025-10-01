@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endangered Turtle Research</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the cool color scheme, matching the turtle slide */
+        :root {
+            --bg-teal: #008080; /* Teal */
+            --text-powder-blue: #B0E0E6; /* Powder Blue */
+            --accent-cyan: #48D1CC; /* Medium Turquoise for contrast */
+            --border-color: #004d4d; /* Darker teal for borders */
+        }
+        body {
+            background-color: var(--bg-teal);
+            color: var(--text-powder-blue);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .content-box {
+            background-color: rgba(0, 77, 77, 0.7); /* Slightly darker, translucent box */
+            border: 1px solid var(--border-color);
+        }
+        .link-card {
+            background-color: rgba(0, 77, 77, 0.9);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0, 77, 77, 0.8);
+            border-color: var(--accent-cyan);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="index-page" class="max-w-2xl w-full mx-auto content-box rounded-xl shadow-2xl overflow-hidden p-8 md:p-12">
+        
+        <!-- Header Section -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-4 text-white border-b-4 pb-4 border-cyan-400">
+            <span class="text-[--accent-cyan]">Endangered Turtle Research</span>
+        </h1>
+        <p class="text-center italic text-xl mb-10 text-[--text-powder-blue]">Explore the species reports below.</p>
+
+        <!-- Project Links -->
+        <div class="space-y-6">
+            
+            <!-- Link Card for Flattened Musk Turtle -->
+            <a href="flattened_musk_turtle.html" class="block">
+                <div class="link-card p-5 rounded-xl border-2 border-[--border-color] flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[--accent-cyan] mb-1">
+                            Flattened Musk Turtle
+                        </h2>
+                        <p class="text-base text-[--text-powder-blue]">
+                            Status, Habitat, and Tracking Model Data for <span class="font-mono">Sternotherus depressus</span>.
+                        </p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-[--accent-cyan]">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Placeholder for future projects -->
+            <div class="link-card p-5 rounded-xl border-2 border-dashed border-gray-500 text-center opacity-70">
+                <p class="text-lg font-semibold text-gray-400">
+                    [Future Project Name]
+                </p>
+                <p class="text-sm text-gray-500">
+                    (Ready for your next research topic!)
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
 
