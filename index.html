@@ -38,6 +38,10 @@
             box-shadow: 0 10px 15px rgba(0, 77, 77, 0.8);
             border-color: var(--accent-cyan);
         }
+        .placeholder-card {
+            opacity: 0.6; /* Dim the placeholder cards */
+            border-style: dashed;
+        }
     </style>
 </head>
 <body>
@@ -53,8 +57,8 @@
         <!-- Project Links -->
         <div class="space-y-6">
             
-            <!-- Link Card for Flattened Musk Turtle -->
-            <a href="musk.html" class="block">
+            <!-- 1. Flattened Musk Turtle (Active Project) -->
+            <a href="flattened_musk_turtle.html" class="block">
                 <div class="link-card p-5 rounded-xl border-2 border-[--border-color] flex items-center justify-between">
                     <div>
                         <h2 class="text-2xl font-bold text-[--accent-cyan] mb-1">
@@ -71,20 +75,93 @@
                 </div>
             </a>
 
-            <!-- Placeholder for future projects -->
-            <div class="link-card p-5 rounded-xl border-2 border-dashed border-gray-500 text-center opacity-70">
-                <p class="text-lg font-semibold text-gray-400">
-                    [Future Project Name]
-                </p>
-                <p class="text-sm text-gray-500">
-                    (Ready for your next research topic!)
-                </p>
-            </div>
+            <!-- 2. Placeholder: Alabama Red-bellied Cooter -->
+            <a href="red.html" class="block">
+                <div class="link-card placeholder-card p-5 rounded-xl border-2 border-[--border-color] flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[--accent-cyan] mb-1">
+                            Alabama Red-bellied Cooter
+                        </h2>
+                        <p class="text-base text-[--text-powder-blue]">
+                            <span class="font-mono">Pseudemys alabamensis</span> — Report In Development.
+                        </p>
+                    </div>
+                    <!-- Placeholder icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4"></path>
+                        <path d="M12 16h.01"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 3. Placeholder: Gopher Tortoise -->
+            <a href="gopher.html" class="block">
+                <div class="link-card placeholder-card p-5 rounded-xl border-2 border-[--border-color] flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[--accent-cyan] mb-1">
+                            Gopher Tortoise
+                        </h2>
+                        <p class="text-base text-[--text-powder-blue]">
+                            <span class="font-mono">Gopherus polyphemus</span> — Report In Development.
+                        </p>
+                    </div>
+                    <!-- Placeholder icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4"></path>
+                        <path d="M12 16h.01"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 4. Placeholder: Loggerhead Sea Turtle -->
+            <a href="loggerhead.html" class="block">
+                <div class="link-card placeholder-card p-5 rounded-xl border-2 border-[--border-color] flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[--accent-cyan] mb-1">
+                            Loggerhead Sea Turtle
+                        </h2>
+                        <p class="text-base text-[--text-powder-blue]">
+                            <span class="font-mono">Caretta caretta</span> — Report In Development.
+                        </p>
+                    </div>
+                    <!-- Placeholder icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4"></path>
+                        <path d="M12 16h.01"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 5. Placeholder: Kemp's Ridley Sea Turtle -->
+            <a href="Kemps.html" class="block">
+                <div class="link-card placeholder-card p-5 rounded-xl border-2 border-[--border-color] flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[--accent-cyan] mb-1">
+                            Kemp's Ridley Sea Turtle
+                        </h2>
+                        <p class="text-base text-[--text-powder-blue]">
+                            <span class="font-mono">Lepidochelys kempii</span> — Report In Development.
+                        </p>
+                    </div>
+                    <!-- Placeholder icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4"></path>
+                        <path d="M12 16h.01"></path>
+                    </svg>
+                </div>
+            </a>
 
         </div>
+
+        <p class="text-center text-sm italic mt-10 opacity-70">
+            Click on a turtle species to view its interactive research slide.
+        </p>
 
     </div>
 
 </body>
 </html>
-
